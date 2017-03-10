@@ -1,0 +1,6 @@
+<lcgdict>
+ <class name="ntupleEvent"/>
+ <class name="BCand"/>
+ <class name="MuMuCand"/>
+ <class name="L1MuonCand"/>
+</lcgdict>
