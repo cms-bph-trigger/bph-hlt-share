@@ -46,7 +46,6 @@ void BHltNtuples::beginJob() {
   outTree_["ntupleTree"] = outfile_-> make<TTree>("ntupleTree","ntupleTree");
   outTree_["ntupleTree"] -> Branch("event" ,&event_, 64000,2);
 
-  hists_["countEvents"  ] = outfile_->make<TH1F>("countEvents" , "countEvents"              ,    4,     0.,    4 );
   hists_["mumuMass_all" ] = outfile_->make<TH1F>("mumuMass_all", "mass"                     , 2000,     0.,   20 ); 
 
   hists_["JpsiPt"       ] = outfile_->make<TH1F>("JpsiPt"      , "mass"                     ,  400,     0.,   40 ); 
@@ -55,7 +54,6 @@ void BHltNtuples::beginJob() {
   hists_["JpsiCL"       ] = outfile_->make<TH1F>("JpsiCL"      , "mass"                     , 1000,     0.,    1 ); 
 
   hists_["trkPt"        ] = outfile_->make<TH1F>("trkPt"       , "pt trk"                   ,  150,     0.,   15 );
-  hists_["onlineTrkPt"  ] = outfile_->make<TH1F>("onlineTrkPt" , "pt onl trk"               ,  150,     0.,   15 );
   hists_["D0sig"        ] = outfile_->make<TH1F>("D0sig"       , ""                         ,  600,    -1.,    5 ); 
   hists_["BInvMass"     ] = outfile_->make<TH1F>("BInvMass"    , "BInvMass"                 , 2000,     0.,   20.);
 
@@ -102,7 +100,7 @@ void BHltNtuples::analyze (const edm::Event &event, const edm::EventSetup &event
     }
     event_.nVtx = nGoodVtx;
 
-	// Fill bx and inst lumi info
+    // 	Fill bx and inst lumi info
 	if (event.isRealData()) {
 	  event_.bxId  = event.bunchCrossing();
 

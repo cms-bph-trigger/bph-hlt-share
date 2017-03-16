@@ -1,5 +1,6 @@
 /** \class BHltNtuples
  */      
+// #include "FWCore/Framework/interface/EDAnalyzer.h"
 #include "FWCore/Framework/interface/one/EDAnalyzer.h"
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "FWCore/Framework/interface/EventSetup.h"
@@ -48,6 +49,7 @@
 #include "NtupleTools/ntupleForL1/src/ntupleTree.h"
 
 
+// class BHltNtuples : public edm::EDAnalyzer {
 class BHltNtuples : public edm::one::EDAnalyzer<> {
 
  public:
