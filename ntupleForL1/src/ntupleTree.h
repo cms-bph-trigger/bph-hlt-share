@@ -107,7 +107,6 @@ public:
   Int_t   eventNumber;           
 
   Int_t   nVtx;                    
-  Int_t   nTrks;   
   Float_t trueNI;   
 
   Float_t bxId;

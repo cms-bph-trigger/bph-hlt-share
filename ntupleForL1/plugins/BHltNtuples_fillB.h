@@ -210,7 +210,7 @@ void BHltNtuples::fillMuMu (const edm::Handle<reco::MuonCollection>       & muon
   // Loop muon collection
   for(std::vector<reco::Muon>::const_iterator mu1=muons->begin(); mu1!=muons->end(); ++mu1) 
   { 
-    if( muon::isSoftMuon( (*mu1), pvColl[0] ) && (*mu1).pt() > 0 && fabs( (*mu1).eta() ) < 2.4) 
+    if( muon::isSoftMuon( (*mu1), pvColl[0] ) && (*mu1).pt() > minPtMu_ && fabs( (*mu1).eta() ) < maxEtaMu_) 
     {
       // Look for the second muon
       for(std::vector<reco::Muon>::const_iterator mu2=mu1; mu2!=muons->end(); ++mu2) {
