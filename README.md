@@ -36,7 +36,7 @@ git clone https://github.com/cms-l1t-offline/L1Trigger-L1TMuon.git L1Trigger/L1T
 
 mkdir NtupleTools
 cd NtupleTools
-git clone git@github.com:sarafiorendi/bph-hlt-share.git
+git clone git@github.com:sarafiorendi/bph-hlt-share.git .
 
 cd ..
 scramv1 b
