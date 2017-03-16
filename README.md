@@ -5,6 +5,7 @@ cmsenv
 git cms-addpkg  L1Trigger/L1TMuon
 git cms-addpkg  EventFilter/L1TRawToDigi
 git cms-addpkg  DataFormats/L1Trigger/
+git cms-merge-topic 17853
 
 git remote add l1repo git@github.com:cms-l1t-offline/cmssw.git
 git fetch l1repo
