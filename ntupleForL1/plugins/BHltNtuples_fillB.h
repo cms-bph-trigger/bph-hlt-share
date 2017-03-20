@@ -80,8 +80,6 @@ void BHltNtuples::fillB    (const edm::Handle<reco::MuonCollection>       & muon
           {
             reco::Track itrk1       = tracks->at(tracksIt) ;                                                
             
-            //charge = +1 
-            if (itrk1.charge() != 1)    continue;
             if (overlap(*mu1,itrk1))    continue;
             if (overlap(*mu2,itrk1))    continue;
             
