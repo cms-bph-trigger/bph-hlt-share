@@ -5,7 +5,6 @@ cmsenv
 git cms-addpkg  L1Trigger/L1TMuon
 git cms-addpkg  EventFilter/L1TRawToDigi
 git cms-addpkg  DataFormats/L1Trigger/
-git cms-merge-topic 17853
 
 git remote add l1repo git@github.com:cms-l1t-offline/cmssw.git
 git fetch l1repo
@@ -35,12 +34,15 @@ git checkout tags/l1t-integration-v92.4 L1Trigger/L1TMuon/src/MicroGMTExtrapolat
 git checkout tags/l1t-integration-v92.4 L1Trigger/L1TMuon/src/MicroGMTIsolationUnit.cc
 git clone https://github.com/cms-l1t-offline/L1Trigger-L1TMuon.git L1Trigger/L1TMuon/data
 
+git commit -a -m "L1setup"
+
 mkdir NtupleTools
 cd NtupleTools
 git clone git@github.com:cms-bph-trigger/bph-hlt-share.git .
 cd ..
 
-git cms-checkdeps -a
+git cms-merge-topic 17853
+
 scramv1 b
 ```
 
